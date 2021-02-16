@@ -1,0 +1,52 @@
+{
+  "name": "@urbanshona/generator",
+  "version": "0.0.1",
+  "author": {
+    "name": "Desmond Rgwaringesu",
+    "email": "desmondrg@gmail.com"
+  },
+  "description": "A Command Line Interface for generating NestJS Feature Modules from a set of templates in a specified folder. The generated NestKS Feature Module folder will contain a service, service.spec, module, controller or controller.spec depending on the specified options.",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "webpack --mode=production",
+    "dev": "ts-node  -r tsconfig-paths/register ./src/index.ts -s src/server/entities -o src/browser/entities"
+  },
+  "keywords": [
+    "strip decorators",
+    "remove decorators",
+    "remove decorators from TypeORM Entities"
+  ],
+  "repository": "",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "generator": "./index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "~7.12.16",
+    "@babel/plugin-proposal-class-properties": "~7.12.13",
+    "@babel/plugin-proposal-decorators": "~7.12.13",
+    "@babel/plugin-proposal-object-rest-spread": "~7.12.13",
+    "@babel/preset-env": "~7.12.16",
+    "@babel/preset-typescript": "~7.12.16",
+    "@types/yargs": "^16.0.0",
+    "babel-loader": "~8.2.2",
+    "babel-plugin-module-resolver": "~4.1.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "fork-ts-checker-webpack-plugin": "~6.1.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "~4.1.5",
+    "webpack": "~5.22.0",
+    "webpack-cli": "~4.5.0",
+    "yargs": "~16.2.0"
+  },
+  "dependencies": {
+    "chalk": "*"
+  }
+}

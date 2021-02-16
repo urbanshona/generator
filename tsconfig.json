@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": false,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "declaration": false,
+    "outDir": "out-tsc",
+    "target": "es2015",
+    "module": "commonjs",
+    "strict": true,
+    "baseUrl": "./",
+    "types": ["node"],
+    "paths": {
+      "@generator-core/*": [
+        "src/core/*"
+      ],
+      "@generator-shared/*": [
+        "src/shared/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/browser/**/*",
+    "src/server/**/*"
+  ]
+}
